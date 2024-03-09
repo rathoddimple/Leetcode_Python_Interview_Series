@@ -35,44 +35,6 @@ def rotate(nums: list[int], k: int) -> None:
     reverse(k, n - 1)
     return nums
 
-def switch(index,array):
-    print(f"array before change {array}")
-    switch_el = array[len(array)-1]
-    # print(f"swith_el {switch_el}")
-    for i in range(len(array)-1,index,-1):
-        # print(f"switch {array[i]}")
-        # print(f"{array[i-1]}")
-        array[i] = array[i-1]
-    array[index] = switch_el
-    print(f"changed {array}")
-
-def switch_2(k,nums):
-    while k!=0:
-        nums_copy = nums.copy()
-        nums[0] = nums_copy[-1]
-        for i in range(0,len(nums_copy)-1):
-            nums[i+1] = nums_copy[i]
-        k-=1
-
-def switch_3(nums,k):
-     nums = (nums[len(nums) - k:len(nums)] 
-                 + nums[0:len(nums) - k])
-      
-                
-def rotate_2(nums: list[int], k: int) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        index = k
-        while k !=0:
-            switch(0,nums)
-            k-=1
-        # print(f"nums 2 {nums}")
-            
 nums = [1,2,3,4,5,6,7]
-# print(f"{nums[-1]}")
 new_nums = rotate(nums,3)
 print(f"new nums {new_nums}")
-# print(len(nums))
-# index = len(nums)-1
-# print(nums[len(nums)-1])

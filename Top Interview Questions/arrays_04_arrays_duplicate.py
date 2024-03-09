@@ -1,19 +1,3 @@
-# class Solution:
-#     def containsDuplicate(self, nums: List[int]) -> bool:
-#         def check_count(elem,nums):
-#             return [i for i in nums if i==elem]
-#         unique_list = []
-#         for i in range(0,len(nums)):
-#             if nums[i] not in unique_list:
-#                 unique_list.append(nums[i])
-#         if len(unique_list) == len(nums):
-#             return False
-#         else:
-#             return True
-        
-        
-#         for i in range(0,len(nums)):
-
 # Example 1:
 
 # Input: nums = [1,2,3,1]
